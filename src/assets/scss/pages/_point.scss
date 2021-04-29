@@ -1,0 +1,176 @@
+#point-wrapper {
+    margin-top: 150px;
+    .card {
+        .card-container {
+            text-align: center;
+            @include flex(ce);
+            flex-direction: column;
+            .title {
+                color: $main-color-regular3;
+            }
+
+            .desc {
+                margin-top: 30px;
+                font-size: 16px;
+            }
+
+            .card-glide {
+                margin-top: 30px;
+                width: 586px;
+                max-width: 100%;
+
+                .glide__track {
+                    .glide__slides {
+                        .glide__slide {
+                            img {
+                                max-width: 100%;
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+
+                .glide__arrow {
+                    border: none;
+                    border-radius: unset;
+                    box-shadow: unset;
+                    text-shadow: unset;
+
+                    &.glide__arrow--left {
+                        @media screen and (max-width: 480px) {
+                            left: 1em;
+                        }
+                    }
+
+                    &.glide__arrow--right {
+                        @media screen and (max-width: 480px) {
+                            right: 1em;
+                        }
+                    }
+
+                    img {
+                        @media screen and (max-width: 480px) {
+                            width: 60%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .regulations {
+        margin-top: 40px;
+
+        @media screen and (max-width: 768px) {
+            padding: 0 20px;
+        }
+
+        .regulations-container {
+            .title {
+                font-size: 20px;
+            }
+            .desc {
+                margin-top: 20px;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    .question {
+        margin-top: 40px;
+
+        @media screen and (max-width: 768px) {
+            padding: 0 20px;
+        }
+
+        .question-container {
+            .title {
+                text-align: center;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 30px;
+                span {
+                    color: $main-color-light;
+                }
+            }
+
+            .tabs {
+                margin: 40px 0 80px;
+                border: 1px solid $main-color-regular3;
+                .tab {
+                    width: 100%;
+                    color: $black-color-bold;
+                    font-size: 20px;
+                    font-weight: 500;
+                    overflow: hidden;
+                    position: relative;
+
+                    &:not(:last-child) {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 20px;
+                            right: 20px;
+                            height: 1px;
+                            background-color: $main-color-regular3;
+                        }
+                    }
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        z-index: -1;
+                        // :checked
+                        &:checked {
+                            + .tab-label {
+                                background-color: $white-color-light;
+                                &::after {
+                                    @include transform(rotate(0deg));
+                                }
+                            }
+                            ~ .tab-content {
+                                max-height: 100vh;
+                                padding: 20px;
+                            }
+                        }
+                    }
+                    .tab-label {
+                        @include flex(sb);
+                        padding: 20px 28px;
+                        background-color: $white-color;
+                        cursor: pointer;
+
+                        @media screen and (max-width: 768px) {
+                            font-size: 16px;
+                            padding: 20px;
+                        }
+
+                        /* Icon */
+                        &:hover {
+                            background-color: $white-color-light;
+                        }
+                        &::after {
+                            content: url("/assets/img/pages/accumulate points/level01/section02/Path 2295.png");
+                            max-width: 100%;
+                            text-align: center;
+                            @include transform(rotate(-90deg));
+                            @include transition($transition-linear);
+                            @include flex(ce);
+                        }
+                    }
+                    .tab-content {
+                        max-height: 0;
+                        padding: 0 20px;
+                        color: $black-color;
+                        background: white;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        @include transition($transition-linear);
+                    }
+                }
+            }
+        }
+    }
+}

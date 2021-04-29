@@ -1,0 +1,102 @@
+.news {
+    overflow: hidden;
+    .news-container {
+        @media screen and (max-width: 480px) {
+            padding: 0 40px;
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .row {
+            margin: 0 -40px;
+            .news-item {
+                padding: 0 40px;
+                .news-thumb {
+                    margin: 40px 0 0;
+                    position: relative;
+                    box-shadow: 0 3px 30px #ccc;
+
+                    img {
+                        max-width: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        @include flex(ce);
+                    }
+                    .news-box {
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        left: 0;
+                        padding: 18px;
+
+                        @include flex(st);
+                        align-items: flex-start;
+                        flex-direction: column;
+                        height: 112px;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-color: $main-color-light2;
+                            opacity: 0.7;
+                        }
+
+                        .news-title {
+                            color: $main-color-regular2;
+                            font-weight: 600;
+                            z-index: 1;
+                        }
+
+                        .news-link {
+                            color: $main-color-regular2;
+                            font-weight: 400;
+                            text-decoration: underline;
+                            margin-top: 24px;
+                            z-index: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .pagination {
+            @include flex(ce);
+            margin-top: 40px;
+
+            & > a {
+                font-size: 16px;
+                color: $main-color-regular2;
+            }
+
+            .pagination-prev {
+            }
+
+            .pagination-next {
+            }
+
+            .number-box {
+                @include flex(st);
+                .number-item {
+                    .pagination-number-link {
+                        @include flex(ce);
+                        width: 24px;
+                        height: 24px;
+                        margin: 0 10px;
+                        border: 1px solid $main-color-regular2;
+                        color: $black-color-bold;
+
+                        &.active {
+                            background-color: $main-color-light2;
+                            border: 1px solid $main-color-light2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

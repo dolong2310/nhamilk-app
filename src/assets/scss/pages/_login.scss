@@ -1,0 +1,142 @@
+.logging-form {
+    .form {
+        @include flex(st);
+        align-items: flex-start;
+        flex-direction: column;
+
+        .heading {
+            font-size: 20px;
+            font-weight: 500;
+            color: $white-color;
+            background-color: $main-color-light;
+            border-radius: 40px;
+            padding: 20px 40px;
+            width: 100%;
+            text-transform: uppercase;
+
+            @media screen and (max-width: 768px) {
+                font-size: 16px;
+            }
+
+            @media screen and (max-width: 480px) {
+                text-align: center;
+            }
+        }
+
+        .form-group {
+            width: 100%;
+            @include flex(sb);
+            margin-top: 10px;
+
+            @media screen and (max-width: 480px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            label {
+                font-size: 16px;
+                font-weight: 400;
+                color: $black-color;
+                flex: 1;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 14px;
+                }
+
+                @media screen and (max-width: 480px) {
+                    margin-bottom: 12px;
+                }
+            }
+
+            .form-controller {
+                flex: 2;
+
+                @media screen and (max-width: 480px) {
+                    width: 100%;
+                }
+
+                input[name="fullname"],
+                input[name="identifier"],
+                input[name="email"],
+                input[name="password"],
+                input[name="retypePassword"],
+                input[name="address"],
+                input[name="phone"],
+                select[name="province"] {
+                    padding: 12px;
+                    border: 1px solid rgba(#707070, 33%);
+                    outline: none;
+                    border-radius: 20px;
+                    font-size: 16px;
+                    @include transition($transition-linear);
+                    width: 100%;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 14px;
+                        padding: 8px 12px;
+                    }
+                }
+
+                select[name="province"] {
+                    option {
+                        border: none;
+                        outline: none;
+                        border-radius: 20px;
+                    }
+                }
+
+                p {
+                    display: block;
+                    margin-top: 4px;
+                    font-size: 14px;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 12px;
+                    }
+                }
+
+                &:hover {
+                    input,
+                    select[name="province"] {
+                        border: 1px solid $main-color-light;
+                    }
+                }
+            }
+            &.invalid {
+                .form-controller {
+                    input,
+                    select[name="province"] {
+                        border: 1px solid $error-color;
+                    }
+
+                    p {
+                        color: $error-color;
+                    }
+
+                    &:hover {
+                        input {
+                            border: 1px solid $error-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn {
+            font-size: 20px;
+            margin-top: 36px;
+            width: 100%;
+        }
+    }
+}
+
+.login-form {
+    .form {
+        @media screen and (max-width: 768px) {
+            margin-top: 40px;
+        }
+        .btn {
+            align-self: flex-end;
+        }
+    }
+}

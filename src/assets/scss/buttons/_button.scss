@@ -1,0 +1,131 @@
+.btn {
+    border: 1px solid $main-color-regular3;
+    color: $main-color-regular3;
+    font-weight: 400;
+    border-radius: 20px;
+    width: fit-content;
+    max-width: 100%;
+    cursor: pointer;
+    @include flex(ce);
+
+    &.sm {
+        padding: 16px 30px;
+    }
+
+    &.md {
+        padding: 18px 32px;
+    }
+
+    &.lg {
+        padding: 12px 28px;
+    }
+
+    &.error {
+        border-color: $red-color;
+        color: $red-color;
+    }
+
+    &.btn-error {
+        border: none;
+        color: $white-color;
+        background-color: $red-color;
+        @include transition($transition-eio);
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &.btn-primary {
+        border: none;
+        color: $white-color;
+        background-color: $main-color-regular3;
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            background: #fff;
+            content: "";
+            height: 190px;
+            left: -224%;
+            opacity: 0.1;
+            position: absolute;
+            top: -60px;
+            transform: rotate(35deg);
+            transition: all 0.3s linear;
+            width: 200px;
+            z-index: 1;
+        }
+
+        &::after {
+            background: #fff;
+            content: "";
+            height: 160px;
+            left: -100%;
+            opacity: 0.2;
+            position: absolute;
+            top: -30px;
+            transform: rotate(35deg);
+            transition: all 0.3s linear;
+            width: 50px;
+            z-index: 1;
+            box-shadow: -10px 0 20px 20px white;
+            border-radius: 50%;
+        }
+
+        &:hover {
+            &::before {
+                left: 0%;
+                transition: all 0.3s linear;
+            }
+
+            &::after {
+                left: 130%;
+                transition: all 0.3s linear;
+            }
+        }
+    }
+
+    &:disabled,
+    &[disabled] {
+        background-color: #ccc;
+        color: #666;
+        pointer-events: none;
+    }
+}
+
+.quantity-btn-box {
+    border: 1px solid $main-color-regular3;
+    border-radius: 20px;
+    @include flex(ce);
+    overflow: hidden;
+
+    .quantity-item {
+        width: 42px;
+        height: 50px;
+
+        & > * {
+            @include flex(ce);
+        }
+
+        .quantity-btn {
+            width: 100%;
+            height: 100%;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            cursor: pointer;
+            @include transition($transition-eio);
+
+            &:hover {
+                background-color: $white-color-light;
+            }
+        }
+        .quantity-number {
+            width: 100%;
+            height: 100%;
+            border-left: 1px solid $main-color-regular3;
+            border-right: 1px solid $main-color-regular3;
+        }
+    }
+}

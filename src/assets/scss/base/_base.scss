@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: "Averta";
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    body {
+        background-color: $white-color;
+        overflow-x: hidden;
+
+        // start trick made footer bottom
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        // end trick made footer bottom
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+input,
+button,
+textarea {
+    outline: none;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.mt-l {
+    margin-top: 100px;
+}
+
+.mt-m {
+    margin-top: 80px;
+}
+
+.mt-s {
+    margin-top: 60px;
+}
+
+h2.title {
+    font-size: 36px;
+    font-weight: 600;
+
+    span {
+        color: $main-color-light2;
+    }
+
+    @media screen and (max-width: 1200px) {
+        font-size: 26px;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 24px;
+    }
+}
+
+p.desc {
+    font-size: 20px;
+    font-weight: 400;
+
+    @media screen and (max-width: 992px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width: 480px) {
+        font-size: 14px;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: $black-color !important;
+}

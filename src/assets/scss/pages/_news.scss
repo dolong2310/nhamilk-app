@@ -1,0 +1,37 @@
+#news-wrapper {
+    .news {
+        margin: 30px 0 50px;
+
+        .news-container {
+            .news-categories {
+                @include flex(sb);
+
+                @media screen and (max-width: 768px) {
+                    align-items: flex-start;
+                    flex-direction: column;
+                }
+
+                .category-item {
+                    @media screen and (max-width: 768px) {
+                        margin-top: 20px;
+                    }
+
+                    .category-link {
+                        color: $main-color-regular3;
+                        text-transform: uppercase;
+                        font-size: 16px;
+                        font-weight: 600;
+
+                        @media screen and (max-width: 992px) {
+                            font-size: 14px;
+                        }
+
+                        &.active {
+                            border-bottom: 2px solid $main-color-regular3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

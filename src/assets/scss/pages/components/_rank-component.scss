@@ -1,0 +1,75 @@
+.rank {
+    margin-top: 60px;
+
+    @media screen and (max-width: 768px) {
+        padding: 0 20px;
+    }
+
+    .rank-container {
+        border: 2px solid $main-color-regular3;
+        border-radius: 20px;
+        padding: 60px 40px 40px;
+        position: relative;
+        text-align: center;
+        width: 660px;
+        max-width: 100%;
+
+        .text-box {
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            @include transform(translateX(-50%));
+
+            .title {
+                color: $main-color-bold;
+                font-size: 22px;
+                font-weight: 600;
+
+                &.override {
+                    background-color: $white-color;
+                }
+
+                @media screen and (max-width: 480px) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        ul {
+            @include flex(sb);
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
+
+            li {
+                @include flex(ce);
+                flex-direction: column;
+
+                @media screen and (max-width: 768px) {
+                    margin-top: 40px;
+                }
+
+                img {
+                    max-width: 100%;
+                    @media screen and (max-width: 768px) {
+                        &:not(:first-child) {
+                            width: 50%;
+                        }
+                    }
+                }
+
+                .label {
+                    margin-top: 12px;
+                    color: $black-color;
+                    font-size: 18px;
+                    font-weight: 600;
+
+                    @media screen and (max-width: 480px) {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

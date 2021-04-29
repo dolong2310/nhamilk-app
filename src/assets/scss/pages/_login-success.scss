@@ -1,0 +1,52 @@
+#login-success-wrapper {
+    margin-top: 150px;
+    .login-success {
+        .login-success-container {
+            text-align: center;
+            .success-icon {
+            }
+
+            .title {
+                font-size: 30px;
+                color: $main-color-light3;
+                margin-top: 26px;
+            }
+
+            .user-name {
+                font-size: 20px;
+                font-weight: 600;
+                color: $black-color;
+                margin-top: 12px;
+            }
+
+            .user-textarea {
+                margin-top: 20px;
+                border: 1px solid $main-color-regular3;
+                border-radius: 30px;
+                padding: 20px;
+                outline: none;
+                font-size: 16px;
+            }
+
+            .buttons {
+                margin-top: 26px;
+                @include flex(ce);
+                flex-direction: column;
+                .status-list {
+                    @include flex(sb);
+                    width: 400px;
+                    max-width: 100%;
+
+                    .status-item {
+                        cursor: pointer;
+                        img {
+                        }
+                    }
+                }
+                .btn {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

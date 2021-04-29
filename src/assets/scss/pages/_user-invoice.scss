@@ -1,0 +1,196 @@
+#account-info-wrapper {
+    .account-info {
+        .account-info-container {
+            .row {
+                .account-content {
+                    &.invoice-box {
+                        padding: 50px 0;
+                        width: 100%;
+
+                        @media screen and (max-width: 768px) {
+                            padding: 0;
+                        }
+
+                        .title {
+                            margin: 0 0 34px 44px;
+
+                            @media screen and (max-width: 992px) {
+                                margin: 0 0 20px;
+                            }
+                        }
+                    }
+
+                    .table-invoice-empty {
+                        @include flex(ce);
+                        flex-direction: column;
+                        height: 90%;
+
+                        img {
+                        }
+
+                        span {
+                            margin-top: 20px;
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: #232323;
+                        }
+
+                        .btn {
+                            margin-top: 20px;
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: $white-color;
+                            padding: 12px 30px;
+                        }
+                    }
+
+                    .table-invoice {
+                        width: 100%;
+                        border-collapse: separate;
+                        border-spacing: 0;
+
+                        @media screen and (max-width: 992px) {
+                            border-left: 1px solid #ccc;
+                            border-right: 1px solid #ccc;
+                            border-bottom: 1px solid #ccc;
+                        }
+
+                        thead {
+                            @media screen and (max-width: 768px) {
+                                display: none;
+                            }
+                            tr {
+                                th {
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    color: $black-color;
+                                    text-align: start;
+
+                                    background-color: #fbfbfb;
+                                    padding: 20px 0;
+                                    border-collapse: separate;
+                                    border-spacing: 0px;
+                                    border-top: 1px solid
+                                        rgba($grey-color-light, 0.4);
+
+                                    &:first-child {
+                                        padding-left: 20px;
+                                    }
+                                }
+                            }
+                        }
+
+                        tbody {
+                            @media screen and (max-width: 768px) {
+                                width: 100%;
+                            }
+                            tr {
+                                @media screen and (max-width: 768px) {
+                                    @include flex(st);
+                                    align-items: flex-start;
+                                    flex-direction: column;
+                                    position: relative;
+                                    width: 100%;
+                                }
+                                td {
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    color: $black-color;
+
+                                    padding: 20px 0;
+                                    border-collapse: separate;
+                                    border-spacing: 0px;
+                                    border-top: 1px solid
+                                        rgba($grey-color-light, 0.4);
+
+                                    .code-order {
+                                        padding-left: 20px;
+                                    }
+
+                                    .date-purchase {
+                                    }
+
+                                    .product {
+                                    }
+
+                                    .total-price {
+                                    }
+
+                                    .status {
+                                        &.success {
+                                            color: $success-color;
+                                        }
+
+                                        &.error {
+                                            color: $error-color;
+                                        }
+                                    }
+
+                                    @media screen and (max-width: 768px) {
+                                        width: 100%;
+                                        padding: 2px 0 2px 20px;
+
+                                        .code-order {
+                                            padding-left: 0;
+                                        }
+
+                                        &:not(:first-child) {
+                                            border-top: none;
+                                        }
+
+                                        &:first-child {
+                                            padding-top: 44px;
+                                            position: relative;
+
+                                            &::before {
+                                                content: "Mã đơn hàng: ";
+                                                margin-right: 10px;
+                                            }
+                                        }
+
+                                        &:nth-child(2) {
+                                            position: relative;
+
+                                            &::before {
+                                                content: "Ngày đặt hàng: ";
+                                                margin-right: 10px;
+                                            }
+                                        }
+
+                                        &:nth-child(3) {
+                                            padding: 0 0 0 20px;
+                                            position: absolute;
+                                            top: 20px;
+                                            left: 0;
+                                            font-size: 16px;
+                                            font-weight: 600;
+                                        }
+
+                                        &:nth-child(4) {
+                                            position: relative;
+
+                                            &::before {
+                                                content: "Tổng tiền: ";
+                                                margin-right: 10px;
+                                            }
+                                        }
+
+                                        &:last-child {
+                                            padding-bottom: 20px;
+                                            position: relative;
+
+                                            &::before {
+                                                content: "Trạng thái: ";
+                                                margin-right: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

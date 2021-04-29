@@ -1,0 +1,154 @@
+#account-info-wrapper {
+    .account-info {
+        .account-info-container {
+            .row {
+                .account-content {
+                    &.address-box {
+                        padding: 50px 30px 0;
+
+                        @media screen and (max-width: 992px) {
+                            padding: 20px 0 0;
+                        }
+
+                        @media screen and (max-width: 768px) {
+                            padding: 0;
+                        }
+
+                        .title {
+                            margin: 0 0 34px 0;
+                        }
+                    }
+
+                    .address {
+                        .address-container {
+                            width: 100%;
+                            .address-box {
+                                position: relative;
+                                padding: 20px;
+                                border-radius: 20px;
+                                border: 1px dashed $main-color-regular3;
+
+                                margin-top: 20px;
+                                font-size: 16px;
+                                font-weight: 400;
+                                color: $black-color-regular1;
+
+                                .heading {
+                                    @include flex(st);
+                                    .username {
+                                    }
+                                    span {
+                                        margin-left: 20px;
+                                        color: $main-color-light;
+                                        i {
+                                            margin-right: 6px;
+                                        }
+                                    }
+                                }
+
+                                .address-details {
+                                    margin-top: 6px;
+                                    span {
+                                    }
+                                }
+
+                                .address-phone {
+                                    margin-top: 6px;
+                                    span {
+                                    }
+                                }
+                                .buttons {
+                                    position: absolute;
+                                    top: 10px;
+                                    right: 20px;
+                                    a {
+                                        margin: 0 5px;
+                                    }
+
+                                    .update-btn {
+                                        color: $blue-color-light;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                    }
+
+                                    .delete-btn {
+                                        color: $red-color-light;
+                                        font-size: 14px;
+                                        font-weight: 400;
+                                    }
+
+                                    @media screen and (max-width: 768px) {
+                                        position: unset;
+                                    }
+                                }
+
+                                @media screen and (max-width: 480px) {
+                                    .heading {
+                                        font-size: 14px;
+                                        .username {
+                                        }
+                                        span {
+                                            font-size: 12px;
+                                            i {
+                                                font-size: 12px;
+                                                margin-right: 6px;
+                                            }
+                                        }
+                                    }
+
+                                    .address-details {
+                                        margin-top: 6px;
+                                        font-size: 14px;
+                                        span {
+                                        }
+                                    }
+
+                                    .address-phone {
+                                        margin-top: 6px;
+                                        font-size: 14px;
+                                        span {
+                                        }
+                                    }
+                                    .buttons {
+                                        a {
+                                            margin: 10px 10px 0 0;
+                                        }
+
+                                        .update-btn {
+                                            font-size: 12px;
+                                        }
+
+                                        .delete-btn {
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .btn {
+                            margin-top: 20px;
+                            padding: 14px 20px;
+                            width: 100%;
+
+                            &::before {
+                                height: 630px;
+                                width: 630px;
+                                top: -280px;
+                            }
+
+                            &:hover {
+                                &::before {
+                                    left: 6%;
+                                }
+                                &::after {
+                                    left: 106%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

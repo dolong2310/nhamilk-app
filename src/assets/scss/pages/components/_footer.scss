@@ -1,0 +1,99 @@
+#footer {
+    // TEMP
+    // position: fixed;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // TEMP
+    margin-top: auto;
+    background-color: $main-color-regular3;
+    .footer-container {
+        color: $white-color;
+        padding: 36px 0 48px;
+
+        @media screen and (max-width: 480px) {
+            padding: 36px 20px 48px;
+        }
+
+        .footer-left {
+            @media screen and (max-width: 480px) {
+                text-align: center;
+            }
+
+            h3 {
+                font-size: 16px;
+                font-weight: 600;
+            }
+            p {
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 10px;
+            }
+            .text-box {
+                margin-top: 6px;
+                img {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+                span {
+                    margin-left: 10px;
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .footer-right {
+            .footer-quick-link {
+                ul {
+                    @include flex(sb);
+
+                    @media screen and (max-width: 480px) {
+                        flex-direction: column;
+                    }
+
+                    li {
+                        @media screen and (max-width: 480px) {
+                            margin-top: 20px;
+                        }
+
+                        a {
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+
+            .footer-payment-support {
+                margin-top: 42px;
+                ul {
+                    @include flex(sb);
+
+                    @media screen and (max-width: 480px) {
+                        flex-direction: column;
+                    }
+                    li {
+                        @media screen and (max-width: 480px) {
+                            margin-top: 24px;
+                        }
+                        a {
+                            img {
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                @media screen and (max-width: 480px) {
+                    margin-top: 10px;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                margin-top: 10px;
+            }
+        }
+    }
+}

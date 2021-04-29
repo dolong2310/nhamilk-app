@@ -1,0 +1,119 @@
+// clear fix
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.progress-bar {
+    .progress-bar-container {
+        width: 800px;
+        max-width: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+
+        ul.bar {
+            @include flex(ce);
+            @extend .cf;
+            counter-reset: step;
+
+            li {
+                width: 100%;
+                position: relative;
+                text-align: center;
+                color: $black-color;
+                font-size: 16px;
+                font-weight: 400;
+                position: relative;
+
+                .timer {
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
+                    .order-time {
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: $main-color-regular3;
+                        position: absolute;
+                        bottom: -24px;
+                        left: 50%;
+                        width: 100%;
+                        @include transform(translateX(-50%));
+                    }
+                }
+
+                @media screen and (max-width: 768px) {
+                    font-size: 14px;
+
+                    &:before {
+                        font-size: 14px;
+                    }
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 6px;
+                        background-color: #e6e6e6;
+                        top: 14px;
+                        left: -50%;
+                        z-index: -1;
+                    }
+                }
+
+                // progress number step
+                &:before {
+                    content: counter(step);
+                    counter-increment: step;
+                    width: 28px;
+                    height: 28px;
+                    @include flex(ce);
+
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: $black-color;
+                    text-align: center;
+
+                    background-color: $white-color;
+                    border: 1px solid $white-color-regular2;
+                    border-radius: 50%;
+                    margin: 0 auto 10px auto;
+                }
+
+                // progress line
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 8px;
+                    background-color: #e6e6e6;
+                    top: 12px;
+                    left: -50%;
+                    z-index: -1;
+                }
+
+                &:first-child:after {
+                    content: none;
+                }
+
+                &.active:before {
+                    background-color: $main-color-regular3;
+                    color: $white-color;
+                }
+
+                &.active + li.active:after {
+                    background-color: $main-color-regular3;
+                }
+
+                &.active:first-child + li:after:not(.active) {
+                    background-color: $white-color;
+                }
+            }
+        }
+    }
+}

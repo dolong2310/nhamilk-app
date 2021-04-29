@@ -1,0 +1,191 @@
+#about-wrapper {
+    margin-top: 150px;
+    .banner {
+        .banner-container {
+            @media screen and (max-width: 768px) {
+                padding: 0 20px;
+            }
+
+            .banner-left {
+                .title {
+                    font-size: 60px;
+                    font-weight: 300;
+                    color: $main-color-regular3;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 40px;
+                    }
+                }
+
+                .label {
+                    font-size: 16px;
+                    margin-top: 30px;
+                    line-height: 28px;
+                    color: $black-color-regular2;
+                }
+
+                .buttons {
+                    margin-top: 100px;
+                    @include flex(st);
+                    align-items: flex-start;
+
+                    @media screen and (max-width: 992px) {
+                        margin-top: 40px;
+                    }
+
+                    .btn {
+                        img {
+                            margin-left: 12px;
+                            @include transition($transition-eio);
+                        }
+
+                        &:hover {
+                            img {
+                                @include transform(translateX(4px));
+                            }
+                        }
+                    }
+
+                    .play-icon {
+                        margin-left: 32px;
+                        cursor: pointer;
+
+                        img {
+                            @include transition($transition-eio);
+
+                            &:hover {
+                                @include transform(scale(1.1));
+                            }
+                        }
+                    }
+                }
+            }
+
+            .banner-right {
+                @media screen and (max-width: 992px) {
+                    margin-top: 40px;
+                }
+
+                .banner-image {
+                    background-image: url("/assets/img/pages/about/banner/Rectangle\ 72.png");
+                    background-repeat: no-repeat;
+                    background-position: bottom right;
+                    background-size: contain;
+                    max-width: 100%;
+
+                    @media screen and (max-width: 992px) {
+                        background-position: center;
+                    }
+
+                    img {
+                        display: block;
+                        margin-left: auto;
+                        object-fit: cover;
+                        max-width: 100%;
+
+                        @media screen and (max-width: 992px) {
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mission {
+        margin-top: 100px;
+        .mission-container {
+            text-align: center;
+
+            @media screen and (max-width: 768px) {
+                padding: 0 20px;
+            }
+
+            .title {
+            }
+
+            .desc {
+                font-size: 16px;
+                margin-top: 24px;
+            }
+
+            .mission-box {
+                margin-top: 50px;
+                @include flex(sb);
+
+                @media screen and (max-width: 992px) {
+                    flex-direction: column;
+                }
+
+                .box {
+                    background-color: $main-color-light1;
+                    border-radius: 20px;
+                    box-shadow: 0 8px 30px #ccc;
+                    padding: 40px 30px;
+                    width: calc(33.3333% - (112px / 3));
+                    max-width: 100%;
+
+                    @media screen and (max-width: 1200px) {
+                        min-height: 322px;
+                        flex: 1 1 0;
+                        margin: 0 14px;
+                        padding: 20px 30px;
+                    }
+
+                    @media screen and (max-width: 992px) {
+                        min-height: unset;
+                        width: 100%;
+
+                        &:not(:first-child) {
+                            margin-top: 40px;
+                        }
+                    }
+
+                    img {
+                    }
+
+                    h3.title {
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: $main-color-regular3;
+                        margin-top: 20px;
+                    }
+
+                    .desc {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .process {
+        margin-top: 100px;
+
+        @media screen and (max-width: 768px) {
+            margin-top: 60px;
+        }
+
+        .process-container {
+            text-align: center;
+
+            @media screen and (max-width: 768px) {
+                padding: 0 20px;
+            }
+
+            .title {
+            }
+
+            .desc {
+                font-size: 16px;
+                margin-top: 24px;
+            }
+
+            .process-image {
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

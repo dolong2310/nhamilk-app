@@ -1,0 +1,32 @@
+#account-info-wrapper {
+    .account-info {
+        .account-info-container {
+            .row {
+                .account-content {
+                    &.wish-list-empty-box {
+                        @include flex(ce);
+                        flex-direction: column;
+
+                        img {
+
+                        }
+
+                        p {
+                            margin-top: 20px;
+                            font-size: 16px;
+                            font-weight: 400;
+                            color: $black-color;
+                        }
+
+                        .btn {
+                            margin-top: 20px;
+                            font-size: 16px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,152 @@
+#store-wrapper {
+    margin: 140px 0 100px;
+    .store {
+        .store-container {
+            text-align: center;
+
+            @media screen and (max-width: 768px) {
+                padding: 0 20px;
+            }
+
+            .title {
+                color: $main-color-light;
+                padding: 0 80px;
+
+                @media screen and (max-width: 768px) {
+                    padding: 0;
+                }
+            }
+
+            .desc {
+                padding: 0 80px;
+                font-weight: 600;
+                margin-top: 14px;
+
+                @media screen and (max-width: 768px) {
+                    padding: 0;
+                }
+
+                span {
+                    display: block;
+                    margin-top: 20px;
+                    font-weight: 400;
+                }
+            }
+
+            .store-box {
+                margin-top: 40px;
+                @include flex(ce);
+                flex-direction: column;
+
+                .title {
+                    color: $black-color;
+                    font-weight: 400;
+                }
+
+                .select {
+                    position: relative;
+                    margin-top: 16px;
+                    width: 300px;
+                    border: 1px solid $grey-color-light;
+                    border-radius: 20px;
+                    padding: 0 30px;
+
+                    .selectBtn {
+                        width: 100%;
+                        padding: 12px 0;
+                        text-align: start;
+                        position: relative;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        -ms-user-select: none;
+                        user-select: none;
+                        background-color: $white-color;
+                        cursor: pointer;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 45%;
+                            right: 15px;
+                            width: 6px;
+                            height: 6px;
+                            -webkit-transform: translateY(-50%) rotate(45deg);
+                            transform: translateY(-50%) rotate(45deg);
+                            border-right: 2px solid #666;
+                            border-bottom: 2px solid #666;
+                            transition: 0.2s ease;
+                        }
+                    }
+
+                    .selectDropdown {
+                        position: absolute;
+                        top: 104%;
+                        left: 0;
+                        width: 100%;
+                        border-radius: 0 0 3px 3px;
+
+                        z-index: 1;
+                        overflow: hidden;
+                        background-color: #fff;
+                        border-top: 1px solid #eee;
+
+                        visibility: hidden;
+                        transform-origin: top center;
+                        -webkit-transform-origin: top center;
+                        box-shadow: 0 3px 3px $boxShadow;
+
+                        @include transform(scale(1, 0));
+                        @include transition($transition-eio);
+
+                        .option {
+                            padding: 10px;
+                            box-sizing: border-box;
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: #f8f8f8;
+                            }
+                        }
+
+                        &.toggle {
+                            visibility: visible;
+                            @include transform(scale(1, 1));
+                        }
+                    }
+                }
+
+                .store-list {
+                    .store-item {
+                        @include flex(ce);
+                        flex-direction: column;
+                        margin-top: 60px;
+
+                        .store-item-image {
+                            @include flex(ce);
+                            width: 300px;
+                            height: 180px;
+                            max-width: 100%;
+                            border: 1px solid $main-color-regular3;
+                            overflow: hidden;
+
+                            @media screen and (max-width: 480px) {
+                                height: 104px;
+                            }
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+                        .store-text {
+                            margin-top: 12px;
+                            font-size: 16px;
+                            font-weight: 600;
+                            color: $black-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

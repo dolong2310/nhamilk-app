@@ -1,0 +1,35 @@
+// light
+@font-face {
+    font-family: "Averta";
+    src: local("Averta"),
+        url("../../../assets/fonts/Averta-Light.otf") format("opentype");
+    font-weight: 300;
+}
+// regular
+@font-face {
+    font-family: "Averta";
+    src: local("Averta"),
+        url("../../../assets/fonts/Averta-Regular.otf") format("opentype");
+    font-weight: 400;
+}
+// semi bold
+@font-face {
+    font-family: "Averta";
+    src: local("Averta"),
+        url("../../../assets/fonts/Averta-Semibold.otf") format("opentype");
+    font-weight: 500;
+}
+// bold
+@font-face {
+    font-family: "Averta";
+    src: local("Averta"),
+        url("../../../assets/fonts/Averta-Bold.otf") format("opentype");
+    font-weight: 600;
+}
+// extra bold
+@font-face {
+    font-family: "Averta";
+    src: local("Averta"),
+        url("../../../assets/fonts/Averta-ExtraBold.otf") format("opentype");
+    font-weight: 700;
+}

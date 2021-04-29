@@ -1,0 +1,40 @@
+.breadcrumb {
+    background-color: #ccd6dc;
+    margin-top: 90px;
+
+    @media screen and (max-width: 992px) {
+        margin-top: 138px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-top: 128px;
+    }
+
+    .breadcrumb-container {
+        padding: 10px 0;
+
+        @media screen and (max-width: 768px) {
+            padding: 10px 20px;
+        }
+
+        .breadcrumb-list {
+            .breadcrumb-item {
+                display: inline-block;
+
+                &:not(:last-child)::after {
+                    content: "/";
+                    margin: 0 4px;
+                    color: $black-color;
+                }
+
+                .breadcrumb-link {
+                    color: $black-color;
+
+                    &.active {
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}

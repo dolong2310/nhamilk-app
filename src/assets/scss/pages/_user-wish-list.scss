@@ -1,0 +1,54 @@
+#account-info-wrapper {
+    .account-info {
+        .account-info-container {
+            .row {
+                .account-content {
+                    &.wish-list-box {
+                        padding: 50px 30px 0;
+
+                        @media screen and (max-width: 768px) {
+                            padding: 0;
+                        }
+
+                        .wish-list-wrap {
+                            .products {
+                                .products-container {
+                                    .row {
+                                        .products-box {
+                                            a {
+                                                @include flex(ce);
+                                                & > img {
+                                                    width: 50%;
+                                                }
+                                            }
+
+                                            .product-info {
+                                                .product-name {
+                                                    font-size: 14px;
+                                                    margin-bottom: 6px;
+                                                }
+
+                                                .product-link {
+                                                    font-size: 12px;
+                                                }
+                                            }
+
+                                            .btn-delete {
+                                                margin-top: 12px;
+                                                a {
+                                                    img {
+                                                        width: 100%;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

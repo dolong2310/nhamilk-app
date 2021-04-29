@@ -1,0 +1,26 @@
+#product-wrapper {
+    .products {
+        margin: 20px 0 90px;
+        .products-container {
+            .products-heading {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .title {
+                    color: $main-color-regular3;
+                }
+
+                .products-filters {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+
+            .btn {
+                margin: 36px auto 0;
+                color: $main-color-regular3;
+            }
+        }
+    }
+}
