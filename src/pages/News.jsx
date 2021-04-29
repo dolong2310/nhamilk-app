@@ -1,7 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
-import Images from "../constants/images";
 import { Link } from "react-router-dom";
+import Images from "../constants/images";
 
 News.propTypes = {};
 
